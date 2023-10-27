@@ -14,13 +14,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 @SpringBootTest
-class WeatherServiceTest {
+class WeatherClientImplServiceTest {
 
   @MockBean
-  WeatherClient weatherClientMock;
+  WeatherClient WeatherClientMock;
 
   @Autowired
-  WeatherService weatherService;
+  WeatherService WeatherService;
 
   @Test
   @DisplayName("2 - Bean para WeatherService implementado corretamente")
@@ -31,18 +31,18 @@ class WeatherServiceTest {
   }
 
   void testWeatherServiceBeanIsLoaded() {
-    assertNotNull(weatherService);
+    assertNotNull(WeatherService);
   }
- 
+
   void testWeatherServiceReturnsCorrectReport() {
-    Mockito.when(weatherClientMock.getWeather(any())).thenReturn("good weather");
-    
-    String weather = weatherService.getWeatherReport("my city");
-    assertEquals("O clima é: good weather", weather);   
+    Mockito.when(WeatherClientMock.getWeather(any())).thenReturn("good weather");
+
+    String weather = WeatherService.getWeatherReport("my city");
+    assertEquals("O clima é: good weather", weather);
   }
- 
+
   void testWeatherServiceCallsWeatherClient() {
-    weatherService.getWeatherReport("another city");
-    Mockito.verify(weatherClientMock).getWeather("another city");    
+    WeatherService.getWeatherReport("another city");
+    Mockito.verify(WeatherClientMock).getWeather("another city");
   }
 }

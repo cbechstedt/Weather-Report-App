@@ -9,15 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WeatherClientTest {
+class WeatherClientClientTestImpl {
 
   @Autowired
-  WeatherClient weatherClient;
+  WeatherClient WeatherClient;
 
   @Test
   @DisplayName("1 - Bean para WeatherClient implementado corretamente")
   void testWeatherClientBeanIsLoaded() {
-    assertNotNull(weatherClient);
+    assertNotNull(WeatherClient);
   }
 
 }

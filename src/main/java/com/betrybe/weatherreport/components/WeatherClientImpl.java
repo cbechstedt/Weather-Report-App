@@ -1,12 +1,12 @@
-package com.betrybe.weatherreport.Component;
+package com.betrybe.weatherreport.components;
 
 import com.betrybe.weatherreport.interfaces.WeatherClient;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import java.io.IOException;
 
 /**
  * Javadoc.

@@ -23,7 +23,7 @@ public class WeatherReportMain {
    * Main method that is called to start the application.
    */
   public void run(String[] args) {
-    WeatherService WeatherService = context.getBean(WeatherService.class);
+    WeatherService weatherService = context.getBean(WeatherService.class);
 
     System.out.print("Digite o nome da cidade: ");
     Scanner scanner = new Scanner(System.in);
@@ -31,6 +31,6 @@ public class WeatherReportMain {
     String city = scanner.nextLine();
     scanner.close();
 
-    System.out.println(WeatherService.getWeatherReport(city));
+    System.out.println(weatherService.getWeatherReport(city));
   }
 }

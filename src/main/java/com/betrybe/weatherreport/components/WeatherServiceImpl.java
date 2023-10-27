@@ -1,10 +1,13 @@
-package com.betrybe.weatherreport.Component;
+package com.betrybe.weatherreport.components;
 
 import com.betrybe.weatherreport.interfaces.WeatherClient;
 import com.betrybe.weatherreport.interfaces.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * Javadoc.
+ */
 @Component
 public class WeatherServiceImpl implements WeatherService {
 
